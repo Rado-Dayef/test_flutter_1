@@ -13,33 +13,46 @@ class MyApp extends StatelessWidget {
       title: "Test Flutter App",
       home: Scaffold(
         backgroundColor: Colors.blue,
-        appBar: AppBar(backgroundColor: Colors.red),
-        body: Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text("Mourad", style: TextStyle(fontSize: 50)),
-              Text("Mourad", style: TextStyle(fontSize: 50)),
-              Icon(Icons.add, color: Colors.blue, size: 100),
-              Container(
-                width: 300,
-                height: 300,
-                decoration: BoxDecoration(
-                  color: Colors.red,
-                  border: Border.all(color: Colors.white, width: 10),
-                  borderRadius: BorderRadius.circular(999),
-                ),
-                child: Column(
-                  children: [
-                    Text("Mourad", style: TextStyle(fontSize: 50)),
-                    Text("Mourad", style: TextStyle(fontSize: 50)),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
+        appBar: AppBar(backgroundColor: Colors.red, title: Text("Mourad"), leading: Icon(Icons.more_vert), actions: [Icon(Icons.star), Icon(Icons.add)]),
+        body: IconButton(onPressed: (){}, icon: Icon(Icons.add)),
       ),
     );
   }
 }
+
+// class MyApp extends StatefulWidget {
+//   const MyApp({super.key});
+//
+//   @override
+//   State<MyApp> createState() => _MyAppState();
+// }
+//
+// class _MyAppState extends State<MyApp> {
+//   int counter = 0;
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: "Counter App",
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: const Text("Simple Counter"),
+//         ),
+//         body: Center(
+//           child: Text(
+//             counter.toString(),
+//             style: const TextStyle(fontSize: 40),
+//           ),
+//         ),
+//         floatingActionButton: FloatingActionButton(
+//           onPressed: () {
+//             setState(() {
+//               counter++;
+//             });
+//           },
+//           child: const Icon(Icons.add),
+//         ),
+//       ),
+//     );
+//   }
+// }
